@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  flask:
+    build: ./flask
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./flask:/app
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/app.conf:/etc/nginx/conf.d/default.conf

@@ -1,0 +1,21 @@
+;
+; BIND data file for local loopback interface
+;
+$TTL	604800
+@		IN	SOA	tierra.sistema.sol. admin.sistema.sol. (
+			      1		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 7200 )	; Negative Cache TTL
+;
+@						IN	NS	tierra.sistema.sol.
+@						IN	NS	venus.sistema.sol.
+marte.sistema.sol.		IN	A	192.168.57.104
+tierra.sistema.sol.		IN	A	192.168.57.103
+venus.sistema.sol.		IN	A	192.168.57.102
+mercurio.sistema.sol.	IN	A	192.168.57.101
+ns1.sistema.sol.		IN	CNAME	tierra.sistema.sol.
+ns2.sistema.sol.		IN	CNAME	venus.sistema.sol.
+mail.sistema.sol.		IN	CNAME	marte.sistema.sol.
+@						IN	MX 10	marte.sistema.sol.

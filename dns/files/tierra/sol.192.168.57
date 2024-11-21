@@ -1,0 +1,17 @@
+;
+; BIND data file for local loopback interface
+;
+$TTL	604800
+57.168.192.in-addr.arpa. IN	SOA	tierra.sistema.sol. admin.sistema.sol. (
+			      1		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 7200 )	; Negative Cache TTL
+;
+@		IN	NS	tierra.sistema.sol.
+@		IN	NS	venus.sistema.sol.
+103		IN	PTR	tierra.sistema.sol.
+102		IN	PTR	venus.sistema.sol.
+101		IN	PTR	mercurio.sistema.sol.
+

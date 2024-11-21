@@ -1,0 +1,29 @@
+server {
+  listen 80;
+  listen [::]:80;
+
+  root /var/www/santi.com/html/paginaNginx;
+  index index.html index.htm index.nginx-debian.html;
+
+  server_name santi.com; 
+
+  location / {
+    satisfy any;
+
+    allow 192.168.1.141;
+    allow 192.168.1.1/24;
+    deny all;
+
+    auth_basic "Administrator's Area";
+    auth_basic_user_file /etc/nginx/.htpasswd;
+
+    try_files $uri $uri/ =404;
+  }
+
+  location = /contact.html {
+    auth_basic "Área restringida";
+    auth_basic_user_file /etc/nginx/.htpasswd;
+
+    try_files $uri =404;
+  }
+}

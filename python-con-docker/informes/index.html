@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Test Report</title>
+    <style>
+        body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.4;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2 {
+    color: #ff0288;
+    font-size: 2.5rem;
+}
+
+.summary {
+    margin: 32px 0 32px 0;
+    font-size: 1.25rem;
+}
+
+.date {
+    margin-bottom: 20px;
+}
+
+td {
+    padding: 4px 8px 4px 0;
+}
+
+thead {
+    font-weight: bold;
+}
+
+.success, .success a {
+    color: green;
+}
+
+.failure, .failure a {
+    color: red;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #19191c;
+        color: #c2c2c2;
+    }
+}
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Report</h2>
+    <div class="summary">
+        <div class="date">Fri, 14 Jun 2024 13:59:24 +0200</div>
+        <div class="count">Executed: 2 (100%)</div>
+        <div class="count">Succeeded: 1 (50.0%)</div>
+        <div class="count">Failed: 1 (50.0%)</div>
+    </div>
+    <table>
+        <thead>
+        <td>File</td>
+        <td>Status</td>
+        <td>Start Time</td>
+        <td>Duration</td>
+        </thead>
+        <tbody>
+        <tr class="failure" data-duration="27" data-status="failure" data-filename="test.hurl" data-id="1fdc4934-db6b-40f4-b97f-11a9e9c3c1c6" data-timestamp="1718366137">
+    <td><a href="store/1fdc4934-db6b-40f4-b97f-11a9e9c3c1c6-timeline.html">test.hurl</a></td>
+    <td>failure</td>
+    <td>2024-06-14T11:55:37+02:00</td>
+    <td>0.027</td>
+</tr>
+<tr class="success" data-duration="6" data-status="success" data-filename="test.hurl" data-id="d168e885-422c-49aa-8e19-96781b6b5a64" data-timestamp="1718366364">
+    <td><a href="store/d168e885-422c-49aa-8e19-96781b6b5a64-timeline.html">test.hurl</a></td>
+    <td>success</td>
+    <td>2024-06-14T11:59:24+02:00</td>
+    <td>0.006</td>
+</tr>
+
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
